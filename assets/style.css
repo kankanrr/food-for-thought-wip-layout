@@ -50,6 +50,7 @@ footer {
   background: var(--palette2secondary);
   position: relative;
   top: 20px;
+  z-index: -1;
 }
 
 #ing, #maps {
