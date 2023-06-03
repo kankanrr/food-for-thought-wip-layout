@@ -29,6 +29,7 @@
   font-family: 'Wendy One', sans-serif !important;
   font-size: 16px;
   box-sizing: border-box;
+  color: var(--font-white);
 }
 
 body {
@@ -60,6 +61,47 @@ footer {
   font-size: 24px;
   text-align: center;
   margin: 20px;
+}
+
+/* top bar style */
+
+.topbar-override {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background: var(--palette1main);
+  color: var(--font-white);
+}
+
+/* aside styling */
+
+.ingredient-search {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.ing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Map Style */
+
+.map-container {
+  display: flex;
+  width: 20rem;
+  flex-direction: column;
+}
+
+#map {
+  height:500px;
+  width: 100%;
 }
 
 /* weather widget */
@@ -96,59 +138,6 @@ font-size: 30px;
   margin-left: auto;
   margin-right: auto;
   
-}
-/* top bar style */
-
-.topbar-override {
-  display: flex;
-  position: relative;
-  width: 100%;
-  background: var(--palette1main);
-  color: var(--font-white);
-}
-
-/* aside styling */
-
-.ingredient-search {
-  display: flex;
-  flex-direction: column;
-  width: 30rem;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.ing-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* card image styling */
-
-.meal-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 30px;
-  box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.6);
-}
-
-/* Map Style */
-
-.map-container {
-  display: flex;
-  width: 20rem;
-  flex-direction: column;
-}
-
-#maps {
-  margin: 30px;
-}
-
-#map {
-  height:500px;
-  width: 100%;
 }
 
 /* Cards Styling */
@@ -187,6 +176,7 @@ font-size: 30px;
   justify-content: center;
   background-color: var(--palette2secondary);
   box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.6);
+  white-space: pre;
 }
 
 .card-section-img {
@@ -198,6 +188,15 @@ font-size: 30px;
   color: var(--font-white);
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
+}
+
+/* card image styling */
+
+.meal-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.6);
 }
 
 /* New Search Bar */
@@ -426,8 +425,8 @@ font-size: 30px;
   border-radius: 15px;
   list-style-type: none;
   display: grid;
-  grid-template-columns: 85px 85px 85px 85px;
-  grid-template-rows:  85px 85px 85px 85px;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows:  repeat(6, 55px);
   gap: 10px;
 }
 
@@ -460,13 +459,13 @@ font-size: 30px;
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: all 0.6s ease 0s;
+  color: var(--font-dark);
 }
 
 /* Modal Anims */
 
 #modal-items li:hover {
   box-shadow: 0 0.4rem 1.4rem 0 rgba(14, 14, 14, 0.5);
-  /* cursor: pointer; */
   transform: scale(1.25);
   height: 140px;
   width: 100px;
