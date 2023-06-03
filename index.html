@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food For Thought</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar topbar-override">
+        <div class="top-bar-left">
+          <h1 class="menu-text header-1">Food For Thought</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Ingredient Search -->
+      <aside class="ingredient-search">
+        <div class="ing-container">
+          <h2 id="ing">Ingredients Search</h2>
+          <form action="https://www.google.com/search" class="search" id="search-bar">
+            <input type="search" placeholder="Type Ingredient..." name="q" class="search__input"/>
+            <div class="search__button" id="search-button">
+              <i class="ri-search-2-line search__icon"></i>
+              <i class="ri-close-line search__close"></i>
+            </div>
+          </form>
+        </div>
+        <!-- Map Container -->
+        <div class="map-container">
+          <h2 id="maps">Map</h2>
+          <div id="map"></div>
+        </div>
+        <!-- weather widget -->
+        <div id="space_maker"></div>
+        <div id="weather_widget">
+          <p id="weather_question" class="text-center">How's the Weather?</p>
+          <input id="weather_city" placeholder="Your Location" />
+          <button id="weather_search" class="button">Search</button>
+          <div>
+            <p id="current_city" class="text-center"></p>
+            <p id="current_date" class="text-center"></p>
+            <p id="current_temp" class="text-center"></p>
+            <img id="current_icon" />
+          </div>
+        </div>
+      </aside>
+      <!-- recipe list -->
+      <section class="card-container"></section>
+      <!-- Popup -->
+      <section class="popup-container">
+        <div class="pcenter"></div>
+        <div class="popup" id="popup">
+          <div class="overlay"></div>
+          <div class="popup-content">
+            <div class="popup-content-box">
+            <h2>Popup Title</h2>
+            <p>Sample Text</p>
+            <div class="controls">
+              <button class="close-btn">Close</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsIVgK_3r-C_TF1rL6JWvzKCKCvXq6K-M&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/weather.js"></script>
+    <script src="assets/meals-api.js"></script>
+    <script src="assets/googleapi.js"></script>
+    <script src="./assets/main.js"></script>
+  </body>
+  <footer>
+    <p>
+      Made by the Raptors
+      <img
+        class="emojidex-emoji"
+        src="https://cdn.emojidex.com/emoji/seal/raptor.png"
+        height="24"
+        width="24"
+      />
+    </p>
+  </footer>
+</html>
