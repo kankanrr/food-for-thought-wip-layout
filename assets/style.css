@@ -48,6 +48,8 @@ footer {
   text-align: center;
   font-size: 2rem;
   background: var(--palette2secondary);
+  position: relative;
+  top: 20px;
 }
 
 #ing, #maps {
@@ -168,6 +170,8 @@ font-size: 30px;
   border-radius: 35px !important;
   opacity: 1;
   transition: transform ease-out 250ms;
+  border: none !important;
+  background: none !important;
 }
 
 .card:hover {
